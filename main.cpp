@@ -1,27 +1,10 @@
 #include <iostream>
 #include <fstream>
+#include "src/Home/home.cpp"
 using namespace std;
 
-void whireFiles(string arquivo,string Contxt){
-    ofstream files;
-    files.open(arquivo);
-    files << Contxt;
-    files.close();
-}
-
-void ReadFiles(string arquivo){
-    ifstream file;
-    string linhas;
-    file.open(arquivo);
-    while(getline(file,linhas)){
-        cout<<linhas<<endl;
-    }
-}
-
 int main(){
-    string file = "kali.txt";
-    string texto = "";
-    whireFiles(file,texto);
-    ReadFiles(file);
+    Home home;
+    home.execute();
     return 0;
 }
